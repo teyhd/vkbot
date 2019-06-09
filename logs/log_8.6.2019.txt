@@ -1,0 +1,1920 @@
+03:42:57 [callback_handleEvent] : [ERROR] Exception: File not found: /var/www/html/vkbot/bot/films/poster_.jpg in /var/www/html/vkbot/api/vk_api.php:85
+Stack trace:
+#0 /var/www/html/vkbot/bot/non_msg.php(149): vkApi_upload('https://pu.vk.c...', '/var/www/html/v...')
+#1 /var/www/html/vkbot/bot/bot.php(381): _bot_uploadPhoto(120161867, '/var/www/html/v...')
+#2 /var/www/html/vkbot/bot/bot.php(435): docmd('film', 120161867)
+#3 /var/www/html/vkbot/bot/bot.php(116): sinonim('\xD0\xBF\xD0\xBE\xD1\x81\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x82\xD1...', 120161867)
+#4 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x9F\xD0\xBE\xD1\x81\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x82\xD1...', '')
+#5 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#6 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#7 {main}
+21:20:00 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: photos_list is invalid","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"photos.saveMessagesPhoto"},{"key":"photo","value":"[]"},{"key":"server","value":"849332"},{"key":"hash","value":"deb4fac395d8934696d15edccce9ca54"},{"key":"v","value":"5.67"}]}}
+21:20:00 [callback_handleEvent] : [ERROR] Exception: Invalid response for photos.saveMessagesPhoto request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(38): _vkApi_call('photos.saveMess...', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(153): vkApi_photosSaveMessagesPhoto('[]', 849332, 'deb4fac395d8934...')
+#2 /var/www/html/vkbot/bot/games/hangman.php(46): _bot_uploadPhoto(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/bot/bot.php(317): hangman(120161867, '')
+#4 /var/www/html/vkbot/bot/bot.php(455): docmd('hang_game', 120161867)
+#5 /var/www/html/vkbot/bot/bot.php(127): sinonim('\xD0\xB2\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', 120161867)
+#6 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x92\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#7 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#8 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#9 {main}
+21:21:38 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: photos_list is invalid","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"photos.saveMessagesPhoto"},{"key":"photo","value":"[]"},{"key":"server","value":"850024"},{"key":"hash","value":"48625a62f1a55b6b52ba6281ded9dfd7"},{"key":"v","value":"5.67"}]}}
+21:21:38 [callback_handleEvent] : [ERROR] Exception: Invalid response for photos.saveMessagesPhoto request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(38): _vkApi_call('photos.saveMess...', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(153): vkApi_photosSaveMessagesPhoto('[]', 850024, '48625a62f1a55b6...')
+#2 /var/www/html/vkbot/bot/games/hangman.php(46): _bot_uploadPhoto(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/bot/bot.php(317): hangman(120161867, '')
+#4 /var/www/html/vkbot/bot/bot.php(455): docmd('hang_game', 120161867)
+#5 /var/www/html/vkbot/bot/bot.php(127): sinonim('\xD0\xB2\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', 120161867)
+#6 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x92\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#7 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#8 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#9 {main}
+21:25:21 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:25:21 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB7', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:25:26 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:25:26 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:25:31 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:25:31 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x88', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:25:41 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:25:41 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:25:51 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:25:51 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:25:52 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:25:52 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:26:02 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:26:02 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:26:28 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:26:28 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:26:43 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:26:43 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:26:50 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:26:50 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:26:59 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:26:59 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB3', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:27:01 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:27:01 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:27:09 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:27:09 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:33:00 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:33:00 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(148): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xA5\xD0\xB2\xD0\xB0\xD1\x82\xD0\xB8\xD1\x82', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:35:10 [callback_handleEvent] : [ERROR] Exception: File not found: /var/www/html/vkbot/bot/games/hang_pic/hang009.jpg in /var/www/html/vkbot/api/vk_api.php:85
+Stack trace:
+#0 /var/www/html/vkbot/bot/non_msg.php(149): vkApi_upload('https://pu.vk.c...', '/var/www/html/v...')
+#1 /var/www/html/vkbot/bot/games/hangman.php(60): _bot_uploadPhoto(120161867, '/var/www/html/v...')
+#2 /var/www/html/vkbot/bot/bot.php(318): hangman(120161867, '')
+#3 /var/www/html/vkbot/bot/bot.php(456): docmd('hang_game', 120161867)
+#4 /var/www/html/vkbot/bot/bot.php(128): sinonim('\xD0\xB2\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', 120161867)
+#5 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x92\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#6 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#7 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#8 {main}
+21:35:57 [callback_handleEvent] : [ERROR] Exception: File not found: /var/www/html/vkbot/bot/games/hang_pic/hang008.jpg in /var/www/html/vkbot/api/vk_api.php:85
+Stack trace:
+#0 /var/www/html/vkbot/bot/non_msg.php(149): vkApi_upload('https://pu.vk.c...', '/var/www/html/v...')
+#1 /var/www/html/vkbot/bot/games/hangman.php(60): _bot_uploadPhoto(120161867, '/var/www/html/v...')
+#2 /var/www/html/vkbot/bot/bot.php(318): hangman(120161867, '')
+#3 /var/www/html/vkbot/bot/bot.php(456): docmd('hang_game', 120161867)
+#4 /var/www/html/vkbot/bot/bot.php(128): sinonim('\xD0\xB2\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', 120161867)
+#5 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x92\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#6 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#7 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#8 {main}
+21:37:12 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: message is empty or invalid","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"messages.send"},{"key":"peer_id","value":"120161867"},{"key":"keyboard","value":"{\"one_time\":false,\"buttons\":[[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"1\\\"}\",\"label\":\"РџРѕСЃРѕРІРµС‚СѓР№ С„РёР»СЊРј\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"2\\\"}\",\"label\":\"Р’СЂРµРјСЏ\"},\"color\":\"primary\"}],[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"3\\\"}\",\"label\":\"РџРѕРіРѕРґР°\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"4\\\"}\",\"label\":\"Р Р°СЃРєРѕРґРёСЂСѓР№\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"5\\\"}\",\"label\":\"Р—Р°С€РёС„СЂСѓР№\"},\"color\":\"default\"}]]}"},{"key":"v","value":"5.67"}]}}
+21:37:12 [callback_handleEvent] : [ERROR] Exception: Invalid response for messages.send request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(11): _vkApi_call('messages.send', Array)
+#1 /var/www/html/vkbot/bot/games/hangman.php(66): vkApi_messagesSend(120161867, ' ', '', '{"one_time":fal...')
+#2 /var/www/html/vkbot/bot/bot.php(318): hangman(120161867, '')
+#3 /var/www/html/vkbot/bot/bot.php(456): docmd('hang_game', 120161867)
+#4 /var/www/html/vkbot/bot/bot.php(128): sinonim('\xD0\xB2\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', 120161867)
+#5 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x92\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#6 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#7 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#8 {main}
+21:39:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:39:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:39:58 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:39:58 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:41:09 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:41:09 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'g', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:42:34 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:42:34 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:47:47 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:47:47 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:47:54 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:47:54 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:47:57 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:47:57 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:48:05 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:48:05 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:48:30 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:48:30 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:49:19 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:49:19 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'j', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:53:13 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:53:13 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:53:20 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:53:20 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:53:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:53:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB7', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:53:29 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:53:29 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB1', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:53:31 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:53:31 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:53:44 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:53:44 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x88', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:55:01 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:55:01 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:55:13 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: message is empty or invalid","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"messages.send"},{"key":"peer_id","value":"120161867"},{"key":"keyboard","value":"{\"one_time\":false,\"buttons\":[[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"1\\\"}\",\"label\":\"РџРѕСЃРѕРІРµС‚СѓР№ С„РёР»СЊРј\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"2\\\"}\",\"label\":\"Р’СЂРµРјСЏ\"},\"color\":\"primary\"}],[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"3\\\"}\",\"label\":\"РџРѕРіРѕРґР°\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"4\\\"}\",\"label\":\"Р Р°СЃРєРѕРґРёСЂСѓР№\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"5\\\"}\",\"label\":\"Р—Р°С€РёС„СЂСѓР№\"},\"color\":\"default\"}]]}"},{"key":"v","value":"5.67"}]}}
+21:55:13 [callback_handleEvent] : [ERROR] Exception: Invalid response for messages.send request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(11): _vkApi_call('messages.send', Array)
+#1 /var/www/html/vkbot/bot/games/hangman.php(76): vkApi_messagesSend(120161867, ' ', '', '{"one_time":fal...')
+#2 /var/www/html/vkbot/bot/bot.php(27): hangman(120161867, '\xD1\x80')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:56:27 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:56:27 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:56:33 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:56:33 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+21:56:48 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+21:56:48 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:04:57 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:04:57 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:04:59 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:04:59 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:05:04 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:05:04 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:05:08 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:05:08 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:05:17 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:05:17 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:10:11 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:10:11 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB7', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:10:14 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:10:14 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:11:36 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:11:36 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB1', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:11:39 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:11:39 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:12:00 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:12:00 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x88', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:12:16 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:12:16 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x92\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:13:33 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:13:33 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\x92\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:24:01 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:24:01 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:26:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:26:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:26:26 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:26:26 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:26:29 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:26:29 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:27:11 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:27:11 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:27:16 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:27:16 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:28:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:31 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:28:31 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:32 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:28:32 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'r', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:32 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:28:32 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'j', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:35 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:28:35 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:36 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:28:36 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:37 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:28:37 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:28:39 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:28:39 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:29:00 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:29:00 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:30:09 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:30:09 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:30:12 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:30:12 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x88', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:30:15 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:30:15 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB7', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:30:15 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:30:15 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB1', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:30:19 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:30:19 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:30:27 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:30:27 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:31:02 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:31:02 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:31:04 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:31:04 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB7', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:31:04 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:31:04 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB1', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:31:04 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:31:04 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:31:06 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:31:06 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x88', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:31:20 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:31:20 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:32:47 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:32:47 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:32:53 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:32:53 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:33:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:33:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:33:27 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:33:27 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:33:30 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:33:30 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x87', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:33:34 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:33:34 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:33:40 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:33:40 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x8C', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:33:57 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:33:57 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'h', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:34:45 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:34:45 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:34:48 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:34:48 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:34:50 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:34:50 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:34:52 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:34:52 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:34:55 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:34:55 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:34:59 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:34:59 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:35:02 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:35:02 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:35:05 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:35:05 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:35:11 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:35:11 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:38:56 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:38:56 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:38:59 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:38:59 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:02 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:39:02 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:04 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:39:04 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:07 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:39:07 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:11 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:39:11 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:14 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:39:14 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:22 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:39:22 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:27 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:39:27 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 'k', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:51 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:39:51 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:39:55 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:39:55 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:40:01 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:40:01 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB\xD0\xBB\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:40:01 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+22:40:01 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:40:05 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:40:05 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB\xD0\xBB\xD0\xBB\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:40:10 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:40:10 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB\xD0\xBB\xD0\xBB\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:40:14 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:40:14 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:40:16 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:40:16 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB4', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+22:40:21 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+22:40:21 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB4', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:00:49 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:00:49 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, 't', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:00:54 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+23:00:54 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD1\x82', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:04:12 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:04:12 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:04:14 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:04:14 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:04:15 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:04:15 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:04:23 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:04:23 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '[dfnbn', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:10:07 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:10:07 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:27:06 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:27:06 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:27:22 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+23:27:22 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:27:27 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:27:27 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:27:32 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:27:32 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:27:39 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:27:39 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:27:44 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:27:44 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:27:56 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:27:56 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:28:00 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+23:28:00 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:28:03 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:28:03 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:28:06 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:28:06 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:28:58 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:28:58 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:30:16 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:30:16 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:30:26 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:30:26 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:30:35 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:30:35 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB1', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:30:39 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:30:39 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x88', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:30:44 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:30:44 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB7', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:31:08 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:31:08 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:17 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:17 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:20 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:20 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:23 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:23 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:25 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:25 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:36 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:36 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:39 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:39 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:32:43 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:32:43 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(120161867, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(120161867, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:33:06 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:33:06 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB2\xD0\xB8\xD1\x81\xD0\xB5\xD0\xBB\xD0\xB8\xD1\x86\xD0...', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:33:14 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:33:14 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:35:29 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:35:29 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:35:41 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+23:35:41 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:35:52 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:35:52 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:36:06 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:36:06 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:36:14 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:36:14 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:36:19 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:36:19 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x82', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:36:58 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:36:58 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:37:01 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:37:01 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB8', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:37:07 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+23:37:07 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB0', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:37:12 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:37:12 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:37:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:37:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:37:35 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:37:35 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x8B', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:38:29 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:38:29 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:38:36 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:38:36 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB2', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:38:57 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:38:57 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x81', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:39:44 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:39:44 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB9', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:43:23 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:43:23 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x82', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:44:22 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:44:22 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:39 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:39 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:41 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:41 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:43 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:43 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:47 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:47 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:52 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:52 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB7', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:53 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:53 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB1', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:56 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:56 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:47:57 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:47:57 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x88', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:00 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:00 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:05 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:05 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB2', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:06 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:06 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:09 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:09 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x8F', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:11 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:11 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBA', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:14 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:14 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x8B', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:17 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:17 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBF', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:20 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:20 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:48:23 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:48:23 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBB', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:49:20 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:49:20 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x80', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:49:24 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:49:24 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x83', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:49:43 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:49:43 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBE', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:49:48 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:49:48 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xB5', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:49:56 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:49:56 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD0\xBD', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:50:02 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"docs.save"},{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"}]}}
+23:50:02 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x87', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
+23:50:08 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: file is undefined","request_params":[{"key":"title","value":"Voice message"},{"key":"v","value":"5.67"},{"key":"method","value":"docs.save"},{"key":"oauth","value":"1"}]}}
+23:50:08 [callback_handleEvent] : [ERROR] Exception: Invalid response for docs.save request in /var/www/html/vkbot/api/vk_api.php:77
+Stack trace:
+#0 /var/www/html/vkbot/api/vk_api.php(52): _vkApi_call('docs.save', Array)
+#1 /var/www/html/vkbot/bot/non_msg.php(161): vkApi_docsSave(NULL, 'Voice message')
+#2 /var/www/html/vkbot/bot/bot.php(149): _bot_uploadVoiceMessage(237467639, '/var/www/html/v...')
+#3 /var/www/html/vkbot/index.php(84): bot_sendMessage(237467639, '\xD1\x8C', '')
+#4 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#5 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#6 {main}
