@@ -18,6 +18,7 @@ require_once 'bot/mysql_func.php';
 require_once 'bot/non_msg.php'; 
 require_once 'bot/games/hangman.php'; 
 require_once 'bot/games/test.php'; 
+require_once 'bot/games/anagaramm.php'; 
 
 if (!isset($_REQUEST)) {
   

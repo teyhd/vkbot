@@ -19,6 +19,14 @@ $textmsg = mb_strtolower($textmsg);
 $textmsg = rtrim($textmsg,"!?.,/");
 $dialog = getdialog($user_id);
 switch ($dialog) {
+    case 'anagram':
+        if ($textmsg=='хватит'){
+            $msg = "Возвращайся еще";
+            setdialog($user_id,"non");
+        } else {
+            anagramm($user_id,$textmsg);
+            }
+    break;      
      case 'full_info':
           $users_get_response = vkApi_usersGet($textmsg);
           $user = array_pop($users_get_response);
@@ -332,7 +340,12 @@ function docmd($cmd,$user_id){
         break;  
        } 
   } else $msg = "Лишь истинный админ может юзать эту функцию";   
-   switch ($cmd) {
+   switch ($cmd) { //
+       case 'anag_game':
+         anagramm($user_id,'');
+         setdialog($user_id,"anagram");
+         $msg = '';
+        break;    
        case 'want_learn':
            if (isadmin($user_id)>0){
               $msg = 'Вы уже можете обучать бота. Для этого введите фразу, которую он не знает, следуйте меню';
@@ -435,7 +448,7 @@ function docmd($cmd,$user_id){
             
             $downphoto = "https://image.tmdb.org/t/p/w500{$tempimg}";
             
-            $pathf = $_SERVER['DOCUMENT_ROOT'] . "/vkbot/bot/films/poster_{$tempname}.jpg";  
+            $pathf = $_SERVER['DOCUMENT_ROOT'] . "/vkbot/bot/media/films/poster_{$tempname}.jpg";  
             file_put_contents($pathf, file_get_contents($downphoto));
             $msg = "{$username}, посмотри фильм {$tempname}";
             $photo = _bot_uploadPhoto($user_id, $pathf);
