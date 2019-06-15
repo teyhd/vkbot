@@ -21,6 +21,7 @@ require_once 'bot/games/test.php';
 require_once 'bot/games/anagaramm.php'; 
 require_once 'bot/games/true.php'; 
 
+
 if (!isset($_REQUEST)) {
   
   exit;
