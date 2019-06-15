@@ -189,7 +189,7 @@ if (mysqli_connect_errno()) {
     printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
     exit(); 
 }     
-    $stmt = $mysqli->prepare("INSERT INTO tests VALUES (?, 0, 0, 0)"); 
+    $stmt = $mysqli->prepare("INSERT INTO tests VALUES (?, 0, 0, 0, 0)"); 
     $stmt->bind_param('d', $user_id); 
     $stmt->execute(); 
     $stmt->close(); 

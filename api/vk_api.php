@@ -12,15 +12,6 @@ function vkApi_messagesSend($peer_id, $message, $attachments = array(),$keyboard
   ));
 }
 
-//
-
-/*function vkApi_multichat() {
-  return _vkApi_call('messages.createChat', array(
-    'user_ids' => "237467639,120161867",
-    'title' => "Првоерочка"
-  ));
-}*/
-
 function vkApi_Activity($peer_id) {
   return _vkApi_call('messages.setActivity', array(
     'peer_id' => $peer_id,

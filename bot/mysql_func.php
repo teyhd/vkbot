@@ -1,4 +1,30 @@
 <?php
+function mysql_horoscop($mod,$sign,$text){
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
+/* Проверка соединения */ 
+if (mysqli_connect_errno()) { 
+    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
+    exit(); 
+}  
+    if($mod=="set"){
+        $stmt = $mysqli->prepare("UPDATE horoscop SET `{$sign}`='{$text}' WHERE `{$sign}`=`{$sign}`"); 
+        $stmt->bind_param('ss', $sign,$text); 
+        $stmt->execute(); 
+        $stmt->close();
+    }
+    if($mod=="get"){
+        if ($stmt = $mysqli->prepare("SELECT {$sign} FROM horoscop WHERE {$sign}={$sign}")) { 
+            $stmt->execute(); 
+            $stmt->bind_result($col1); 
+            while ($stmt->fetch()) { 
+                $sign = $col1;
+            } 
+            $stmt->close(); 
+        }
+    }
+$mysqli->close(); 
+return $sign;
+}
 function remember($user_id,$mod,$text){
 $mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
 /* Проверка соединения */ 
