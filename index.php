@@ -18,6 +18,8 @@ require_once 'bot/mysql_func.php';
 require_once 'bot/non_msg.php'; 
 require_once 'bot/games/hangman.php'; 
 require_once 'bot/games/test.php'; 
+require_once 'bot/games/anagaramm.php'; 
+require_once 'bot/games/true.php'; 
 
 if (!isset($_REQUEST)) {
   
@@ -45,7 +47,7 @@ function callback_handleEvent() {
         _callback_okResponse();
         break;        
       case CALLBACK_API_EVENT_MESSAGE_TYPING:
-        _callback_handleMessageNew($event['object']);
+       // _callback_handleMessageNew($event['object']);
         break;
       default:
         _callback_response($event['type']);
