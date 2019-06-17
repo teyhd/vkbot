@@ -1,0 +1,38 @@
+19:32:36 [callback_handleEvent] : [ERROR] Exception: File not found: /var/www/html/vkbot/bot/films/poster_Re:ゼロから始める異世界生活 Memory Snow.jpg in /var/www/html/vkbot/api/vk_api.php:102
+Stack trace:
+#0 /var/www/html/vkbot/bot/non_msg.php(149): vkApi_upload('https://pu.vk.c...', '/var/www/html/v...')
+#1 /var/www/html/vkbot/bot/bot.php(441): _bot_uploadPhoto(120161867, '/var/www/html/v...')
+#2 /var/www/html/vkbot/bot/bot.php(495): docmd('film', 120161867)
+#3 /var/www/html/vkbot/bot/bot.php(147): sinonim('\xD0\xBF\xD0\xBE\xD1\x81\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x82\xD1...', 120161867)
+#4 /var/www/html/vkbot/index.php(85): bot_sendMessage(120161867, '\xD0\x9F\xD0\xBE\xD1\x81\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x82\xD1...', '')
+#5 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#6 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#7 {main}
+19:32:36 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: message is empty or invalid","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"messages.send"},{"key":"peer_id","value":"120161867"},{"key":"keyboard","value":"{\"one_time\":false,\"buttons\":[[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"1\\\"}\",\"label\":\"Р§Р°Р№\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"2\\\"}\",\"label\":\"Р•С‰Рµ С‡Р°СЋ\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"3\\\"}\",\"label\":\"РўРёС€РёРЅР°\"},\"color\":\"negative\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"4\\\"}\",\"label\":\"РџСЂРѕС‡РµР»\"},\"color\":\"positive\"}],[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"5\\\"}\",\"label\":\"РџРѕСЃРѕРІРµС‚СѓР№ С„РёР»СЊРј\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"6\\\"}\",\"label\":\"Р’СЂРµРјСЏ\"},\"color\":\"primary\"}],[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"7\\\"}\",\"label\":\"РџРѕРіРѕРґР°\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"8\\\"}\",\"label\":\"Р Р°СЃРєРѕРґРёСЂСѓР№\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"9\\\"}\",\"label\":\"Р—Р°С€РёС„СЂСѓР№\"},\"color\":\"default\"}]]}"},{"key":"v","value":"5.70"}]}}
+19:32:36 [_vkApi_call] : [ERROR] <html>
+<head><title>414 Request-URI Too Long</title></head>
+<body bgcolor="white">
+<center><h1>414 Request-URI Too Long</h1></center>
+<hr><center>nginx/0.3.33</center>
+</body>
+</html>
+
+19:32:49 [callback_handleEvent] : [ERROR] Exception: File not found: /var/www/html/vkbot/bot/films/poster_Ма.jpg in /var/www/html/vkbot/api/vk_api.php:102
+Stack trace:
+#0 /var/www/html/vkbot/bot/non_msg.php(149): vkApi_upload('https://pu.vk.c...', '/var/www/html/v...')
+#1 /var/www/html/vkbot/bot/bot.php(441): _bot_uploadPhoto(120161867, '/var/www/html/v...')
+#2 /var/www/html/vkbot/bot/bot.php(495): docmd('film', 120161867)
+#3 /var/www/html/vkbot/bot/bot.php(147): sinonim('\xD0\xBF\xD0\xBE\xD1\x81\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x82\xD1...', 120161867)
+#4 /var/www/html/vkbot/index.php(85): bot_sendMessage(120161867, '\xD0\x9F\xD0\xBE\xD1\x81\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x82\xD1...', '')
+#5 /var/www/html/vkbot/index.php(41): _callback_handleMessageNew(Array)
+#6 /var/www/html/vkbot/index.php(27): callback_handleEvent()
+#7 {main}
+19:32:49 [_vkApi_call] : [ERROR] {"error":{"error_code":100,"error_msg":"One of the parameters specified was missing or invalid: message is empty or invalid","request_params":[{"key":"oauth","value":"1"},{"key":"method","value":"messages.send"},{"key":"peer_id","value":"120161867"},{"key":"keyboard","value":"{\"one_time\":false,\"buttons\":[[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"1\\\"}\",\"label\":\"Р§Р°Р№\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"2\\\"}\",\"label\":\"Р•С‰Рµ С‡Р°СЋ\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"3\\\"}\",\"label\":\"РўРёС€РёРЅР°\"},\"color\":\"negative\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"4\\\"}\",\"label\":\"РџСЂРѕС‡РµР»\"},\"color\":\"positive\"}],[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"5\\\"}\",\"label\":\"РџРѕСЃРѕРІРµС‚СѓР№ С„РёР»СЊРј\"},\"color\":\"primary\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"6\\\"}\",\"label\":\"Р’СЂРµРјСЏ\"},\"color\":\"primary\"}],[{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"7\\\"}\",\"label\":\"РџРѕРіРѕРґР°\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"8\\\"}\",\"label\":\"Р Р°СЃРєРѕРґРёСЂСѓР№\"},\"color\":\"default\"},{\"action\":{\"type\":\"text\",\"payload\":\"{\\\"button\\\": \\\"9\\\"}\",\"label\":\"Р—Р°С€РёС„СЂСѓР№\"},\"color\":\"default\"}]]}"},{"key":"v","value":"5.70"}]}}
+19:32:49 [_vkApi_call] : [ERROR] <html>
+<head><title>414 Request-URI Too Long</title></head>
+<body bgcolor="white">
+<center><h1>414 Request-URI Too Long</h1></center>
+<hr><center>nginx/0.3.33</center>
+</body>
+</html>
+
