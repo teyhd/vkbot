@@ -15,7 +15,54 @@ require_once 'bot/games/test.php';
 require_once 'bot/games/anagaramm.php'; 
 require_once 'bot/games/true.php'; 
 define("SUGG_INTERVAL",5);
+define("ADMIN_ID",120161867);
 echo("Запущен протокол hronos\n");
+send_msg(ADMIN_ID,"Сервер включен. Загрузка настроек...");
+sleep(2);
+send_msg(ADMIN_ID,"Натсройки успешно загружены!");
+sleep(1);
+send_msg(ADMIN_ID,"Инициализация базы данных...");
+sleep(2);
+send_msg(ADMIN_ID,"Данные успешно загружены!");
+sleep(1); 
+send_msg(ADMIN_ID,"Запуск протокола хронос...");
+sleep(3.5); 
+send_msg(ADMIN_ID,"Протокол хронос успешно запущен!");
+
+$sugg_time_count = 0;
+while(true){
+$hours=date("H");
+$min = date("i");
+$sec = date("s");
+
+if (($hours=="22")&&($min=="00")&&($sec=="00")) { //00:05:00 Обновление гороскопа
+    s_horoscop();
+    send_msg(ADMIN_ID,"Гороскопы успешно обновлены. Сейчас отправим ваш!");
+    send_msg(ADMIN_ID,horoscop(ADMIN_ID));
+}
+
+if (($hours=="13")&&($min=="00")&&($sec=="00")) { //13:00:00 Рассылка гороскопа
+    hroscop_to_users();
+    send_msg(ADMIN_ID,"Рассылка гороскопов пользователям прошла успешно");
+}
+
+if ($sugg_time_count==SUGG_INTERVAL){ //Время предложек
+    admin_list();
+    $sugg_time_count=0;
+}
+
+if ($sec=="00"){
+    $sugg_time_count++;
+    echo("Счетчик минут:{$sugg_time_count}\n");
+}
+
+$event = date("H:i"); //Время для поиска в базе
+active($event);
+
+sleep(1);   
+}
+
+
 //Все предложки
 function drink_sugg($user_id){
 $rand = rand(0,5);  
@@ -105,7 +152,6 @@ function write_scr($text){
         curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
         curl_exec($ch);
         curl_close($ch);
-        setdialog($user_id,"non");  
       for($i=1;$i<=$pic_count;$i++){
            $temp_str = "{$temp_str} {$pieces[$i]}"; 
            }
@@ -133,7 +179,7 @@ for($i=0;$i<=6;$i++){
     sleep(0.6);  
     }
 sleep(1);
-for($i=6;$i<=12;$i++){
+for($i=6;$i<12;$i++){
     $temp = $signs[$i];
     $url = "https://horo.mail.ru/prediction/{$temp}/today/";
     $ch = curl_init();  
@@ -289,7 +335,7 @@ if ($stmt = $mysqli->prepare("SELECT user_id FROM dialog WHERE user_id LIKE '%' 
     while ($stmt->fetch()) { 
        $user_id = $col1;
        if ($user_id!==null){
-           horoscop($user_id);
+           send_msg($user_id,horoscop($user_id));
            sleep(3);
         }
     } 
@@ -298,36 +344,4 @@ if ($stmt = $mysqli->prepare("SELECT user_id FROM dialog WHERE user_id LIKE '%' 
 $mysqli->close(); 
 echo("Отправлена предложка вот этому перцу {$isadmin}\n");
 }//Рассылка гороскопа
-
-
-$sugg_time_count = 0;
-while(true){
-$hours=date("H");
-$min = date("i");
-$sec = date("s");
-
-if (($hours=="00")&&($min=="05")&&($sec=="00")) { //00:05:00 Обновление гороскопа
-    s_horoscop();
-}
-
-if (($hours=="13")&&($min=="00")&&($sec=="00")) { //13:00:00 Рассылка гороскопа
-    hroscop_to_users();
-}
-
-if ($sugg_time_count==SUGG_INTERVAL){ //Время предложек
-    admin_list();
-    $sugg_time_count=0;
-}
-
-if ($sec=="00"){
-    $sugg_time_count++;
-    echo("Счетчик минут:{$sugg_time_count}\n");
-}
-
-$event = date("H:i"); //Время для поиска в базе
-active($event);
-
-sleep(1);   
-}
-
 ?>

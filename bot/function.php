@@ -88,6 +88,7 @@ function weather($user_id){
             $msg = "{$username}, сейчас за окном: {$outwindow}. Температура воздуха: {$temp} градусов Цельсия. Ветер {$wind} метров в секунду. Давление {$press} миллиметров ртутного столба. {$now} {$moon}. Восход: {$vosxod}. Закат: {$zakat}.";   
             return $msg;
 }
+
 function translate($trantext,$lang) {
     $trantext = urlencode($trantext);
     switch($lang)
@@ -128,7 +129,7 @@ function magicball(){
    $magicans=$magicans[rand(0,20)];
    return $magicans;
 }
-function object2array($object) { return @json_decode(@json_encode($object),1); }
+
 function encode($text){
 $flag=false;
 $text_arr = mbStringToArray($text);
@@ -231,7 +232,7 @@ for ($k=0;$k<=$lenth_text;$k++){
 $code = ltrim($code);
 return $code;
 }
-
+function object2array($object) { return @json_decode(@json_encode($object),1); }
 /*function encode($unencoded,$key){//Шифруем
 $string=base64_encode($unencoded);//Переводим в base64
 

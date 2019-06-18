@@ -1,0 +1,250 @@
+@charset "utf-8";
+@media screen and (max-width: 700px) {
+body{
+	background-color:#09025C;
+	background: url(../img/smindphine.png) no-repeat;
+	background-size: cover;
+}
+
+.time{
+	position: fixed;
+	font-size: 80px;
+	color: #FF0004;
+	left: auto;
+	top:5px;
+	text-shadow: 0 0 25px #0000FF;
+	z-index: 100;
+}
+.date{
+	position: fixed;
+	font-size: 168px;
+	color: #FF0004;
+	left: auto;
+	top: 10px;
+	text-shadow: 0 0 25px #0000FF;
+}	
+.tweat{
+	position: fixed;
+	font-size: 168px;
+	color: #FF0004;
+	left: 5px;
+	top:15px;
+	text-shadow: 0 0 25px #0000FF;		
+}
+
+}
+@media screen and (min-width: 1000px) {
+.goog-tooltip {
+	display: none !important;
+}
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important; 
+	box-shadow: none !important; 
+}
+
+body{
+	background-color:#09025C;
+	background: url(../img/smind.png) no-repeat;
+	background-size: cover;
+	}
+#shad{
+	/*box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.8);*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.55;
+	z-index: 100;
+	visibility: hidden;
+}
+
+.calendar{
+	position: fixed;
+	left: 514.5px;
+}
+.time{
+	position: fixed;
+	font-size: 179px;
+	color: #FF0004;
+	left: 1123px;
+	top:224px;
+	text-shadow: 0 0 25px #0000FF;
+	z-index: 100;
+}
+.date{
+	position: fixed;
+	font-size: 168px;
+	color: #FF0004;
+	left: 1200px;
+	top: 632px;
+	text-shadow: 0 0 25px #0000FF;
+}
+.weather{
+	position: fixed;
+	top: 565px;
+	left: 145px;
+	text-align: left;
+
+}
+.but1{
+	position: fixed;
+	top: 303px;
+	left: 213px;		
+	color: #FF0004;
+	border-bottom-color: #00000A;
+	border-color:  #000000;
+	background-color: #00000A;
+	text-shadow: 0 0 25px #0000FF;	
+	z-index: 100;
+}
+.weeks{
+	position: fixed;
+	font-size: 168px;
+	color: #FF0004;
+	left: 1300px;
+    top:835px;
+	text-shadow: 0 0 25px #0000FF;	
+}
+.tweat{
+	position: fixed;
+	font-size: 168px;
+	color: #FF0004;
+	left: 115px;
+	top:560px;
+	text-shadow: 0 0 25px #0000FF;		
+}
+
+#myProgress {
+  position: fixed;	
+  left: 1123px;
+	top:242px;
+  width: 630px;
+  height: 20px;
+  background-color: #FF0004;
+  text-align: center; 
+  line-height: 20px;
+  color: white; 
+  text-shadow: 0 0 25px #0000FF;	
+}
+#killmin{
+  position: fixed;
+  top: 400px;
+  left: 1123px;
+  width: 630px;
+  height: 20px;
+  background-color: #FF0004;
+  text-align: center; 
+  line-height: 20px;
+  color: white; 
+  text-shadow: 0 0 25px #0000FF;		
+}
+#myBar {
+  position: relative;	
+  width: 0%;
+  height: 20px;
+  background-color: #1D1D1D;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 20px; /* To center it vertically */
+  color: #1D1D1D;; 
+  text-shadow: 0 0 25px #0000FF;	
+}
+#Bar{
+  position: relative;	
+  width: 0%;
+  height: 20px;
+  background-color: #1D1D1D;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 20px; /* To center it vertically */
+  color: #1D1D1D;; 
+  text-shadow: 0 0 25px #0000FF;	
+}
+.HP{
+	position: absolute;
+	top: 0px;
+	left: 350px;
+	width: 57px;
+}
+
+#KillDay{
+  position: fixed;
+  top: 90px;
+  left: 1870px;
+  width: 30px;
+  height: 792px;
+  background-color: #FF0004;
+  text-align: center; 
+  line-height: 20px;
+  color: white; 
+  text-shadow: 0 0 25px #0000FF;		
+}
+
+#DayBar{
+  position: relative;	
+  width: 30px;
+  height: 0px;
+  background-color: #1D1D1D;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 20px; /* To center it vertically */
+  color: #1D1D1D;
+  text-shadow: 0 0 25px #0000FF;
+}
+.HPD{
+	position: absolute;
+	top: 50%;
+}
+#killdream{
+  position: fixed;	
+  top: 900px;
+  left: 35px;
+  width: 420px;
+  height: 60px;
+  background-color: #FF0004;
+  text-align: center; 
+  line-height: 20px;
+  color: white; 
+  text-shadow: 0 0 25px #0000FF;	
+}
+
+#dreamBar{
+  position: relative;	
+  width: 0%;
+  height: 60px;
+  background-color: #1D1D1D;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 20px; /* To center it vertically */
+  color: #1D1D1D;; 
+  text-shadow: 0 0 25px #0000FF;		
+}
+.HPDR{
+	position: relative;
+	align-content: center;
+    top: -40px;
+	font-size: 24px;
+}
+#killdream{
+	visibility:  hidden;
+	z-index: 100;
+}
+.msgbot{
+	position: relative;
+	align-content: center;
+	text-align: center;
+	margin: 0 auto;
+	top: 50%;
+	background-color: #13037A;
+	font-size: 140px;
+	color: #00ff90;
+	text-shadow: 0 0 25px #0000FF;	
+	visibility:  hidden;
+	z-index: 105;
+	border: 5px solid;
+	border-radius: 0 10px 20px;
+}
+
+}
