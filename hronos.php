@@ -191,7 +191,7 @@ switch ($rand) {
        $msg = "Хотел предложить чаю, но передумал";
     break;
     case 4:
-       $msg = sayme();
+       $msg = rand_adv();
     break;
     case 5:
        $temtime = date("H:i");

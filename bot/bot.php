@@ -802,7 +802,7 @@ function msg_with_param($user_id,$textmsg){
                $pieces = explode("*", $textmsg);
                if (!empty($pieces[1])) {$music = $pieces[1];}
                $text = $pieces[0];
-               $id = addevent("morning",$user_id,"Самое время просыпаться!!!Вставай",$time,$music);
+               $id = addevent("morning",$user_id,"Самое время просыпаться!!! Вставай",$time,$music);
                $msg ="[id:{$id}]Я разбужу пользователя: {$username} в {$time}!";
                setdialog($user_id,"non");  
            }           
