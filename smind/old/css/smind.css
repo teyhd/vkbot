@@ -1,0 +1,159 @@
+@charset "utf-8";
+.goog-tooltip {
+	display: none !important;
+}
+.goog-tooltip:hover {
+	display: none !important;
+}
+.goog-text-highlight {
+	background-color: transparent !important;
+	border: none !important; 
+	box-shadow: none !important; 
+}
+
+body{
+	background-color:#09025C;
+	background: url(../img/smind.png) no-repeat;
+	background-size: cover;
+	}
+#shad{
+	/*box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.8);*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.55;
+	z-index: 100;
+	visibility: hidden;
+}
+
+.calendar{
+	position: absolute;
+	left: 514.5px;
+}
+.time{
+	position: absolute;
+	font-size: 179px;
+	color: #FF0004;
+	left: 1123px;
+	text-shadow: 0 0 25px #0000FF;
+	z-index: 100;
+}
+.date{
+	position: absolute;
+	font-size: 168px;
+	color: #FF0004;
+	left: 1200px;
+	text-shadow: 0 0 25px #0000FF;
+}
+.weather{
+	position: absolute;
+	top: 565px;
+	left: 145px;
+	text-align: left;
+
+}
+.but1{
+	position: absolute;
+	top: 303px;
+	left: 213px;		
+	color: #FF0004;
+	border-bottom-color: #00000A;
+	border-color:  #000000;
+	background-color: #00000A;
+	text-shadow: 0 0 25px #0000FF;	
+	z-index: 100;
+}
+.weeks{
+	position: absolute;
+	font-size: 168px;
+	color: #FF0004;
+	left: 1300px;
+	text-shadow: 0 0 25px #0000FF;	
+}
+.tweat{
+	position: absolute;
+	font-size: 168px;
+	color: #FF0004;
+	left: 145px;
+	text-shadow: 0 0 25px #0000FF;		
+}
+
+#myProgress {
+  position: absolute;	
+  left: 1123px;
+  width: 630px;
+  height: 20px;
+  background-color: #FF0004;
+  text-align: center; 
+  line-height: 20px;
+  color: white; 
+  text-shadow: 0 0 25px #0000FF;	
+}
+#killmin{
+  position: absolute;
+  top: 400px;
+  left: 1123px;
+  width: 630px;
+  height: 20px;
+  background-color: #FF0004;
+  text-align: center; 
+  line-height: 20px;
+  color: white; 
+  text-shadow: 0 0 25px #0000FF;		
+}
+#myBar {
+  position: relative;	
+  width: 0%;
+  height: 20px;
+  background-color: #1D1D1D;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 20px; /* To center it vertically */
+  color: #1D1D1D;; 
+  text-shadow: 0 0 25px #0000FF;	
+}
+#Bar{
+  position: relative;	
+  width: 0%;
+  height: 20px;
+  background-color: #1D1D1D;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 20px; /* To center it vertically */
+  color: #1D1D1D;; 
+  text-shadow: 0 0 25px #0000FF;	
+}
+.HP{
+	position: absolute;
+	top: 0px;
+	left: 350px;
+}
+
+#KillDay{
+  position: absolute;
+  top: 90px;
+  left: 1870px;
+  width: 30px;
+  height: 792px;
+  background-color: #FF0004;
+  text-align: center; 
+  line-height: 20px;
+  color: white; 
+  text-shadow: 0 0 25px #0000FF;		
+}
+
+#DayBar{
+  position: relative;	
+  width: 30px;
+  height: 0px;
+  background-color: #1D1D1D;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 20px; /* To center it vertically */
+  color: #1D1D1D;
+  text-shadow: 0 0 25px #0000FF;
+}
+.HPD{
+	position: absolute;
+	top: 50%;
+}

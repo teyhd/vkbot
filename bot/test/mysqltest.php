@@ -1,6 +1,43 @@
 <?php
 //echo();
-
+$ask_word = "грамота";
+$text = "tyjn";
+$ask_arr = mbStringToArray($ask_word);
+$ans_arr = mbStringToArray($text);
+$ans_num = count($ans_arr);
+$inter = array_intersect($ask_arr, $ans_arr);
+$inter_num = count($inter);
+echo "$inter_num $ans_num";
+function mbStringToArray ($string) { 
+    $strlen = mb_strlen($string); 
+    while ($strlen) { 
+        $array[] = mb_substr($string,0,1,"UTF-8"); 
+        $string = mb_substr($string,1,$strlen,"UTF-8"); 
+        $strlen = mb_strlen($string); 
+    } 
+    return $array; 
+} 
+function isword($word) {
+    $trantext = urlencode($trantext);
+    $url = "https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20190605T151907Z.a66517fb203342ba.6dc4c2543d88d2494471b5e15fe605cc4058ee41&lang=ru-ru&text={$word}";
+        $ch = curl_init();
+        curl_setopt($ch,CURLOPT_URL,$url);
+        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
+        $json = curl_exec($ch);
+        if(!$json) {
+            echo curl_error($ch);
+        }
+        curl_close($ch);
+        $json = json_decode($json);
+        $arr = object2array($json);
+        $arr = $arr['def'];
+        $arr = $arr[0];
+        $arr = $arr['text'];
+        return $arr;
+}
+function object2array($object) { return @json_decode(@json_encode($object),1); }
+/*
 weather(15);
 function weather($user_id){
            $time = time() + (7 * 24 * 60 * 60);
@@ -56,7 +93,10 @@ function weather($user_id){
             $msg = "{$username}, сейчас за окном: {$outwindow}. Температура воздуха: {$temp} градусов Цельсия. Ветер {$wind} метров в секунду. Давление {$press} миллиметров ртутного столба. {$now} {$moon}. Восход: {$vosxod}. Закат: {$zakat}.";   
             echo $msg;
 }
-
-
-
 function object2array($object) { return @json_decode(@json_encode($object),1); }
+*/
+
+     /*  $tempr=object2array($tempr); 
+       $value = $tempr['def'];
+       $value = $value[0];
+       $value = $value['text'];*/

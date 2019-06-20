@@ -18,6 +18,8 @@ require_once 'bot/mysql_func.php';
 require_once 'bot/non_msg.php'; 
 require_once 'bot/games/hangman.php'; 
 require_once 'bot/games/test.php'; 
+require_once 'bot/games/anagaramm.php'; 
+require_once 'bot/games/true.php'; 
 
 if (!isset($_REQUEST)) {
   
@@ -45,7 +47,7 @@ function callback_handleEvent() {
         _callback_okResponse();
         break;        
       case CALLBACK_API_EVENT_MESSAGE_TYPING:
-        _callback_handleMessageNew($event['object']);
+       // _callback_handleMessageNew($event['object']);
         break;
       default:
         _callback_response($event['type']);
@@ -70,6 +72,17 @@ function _callback_handleMessageNew($data) {
   $user_id = $data['user_id'];
   vkApi_Activity($user_id);
   $body = $data['body'];
+  $geo = $data['geo'];
+  if (!empty($geo)){
+    $geo = $geo['place']; 
+    $title = $geo['title']; 
+    $country = $geo['country']; 
+    $city = $geo['city']; 
+    $keyboard = keybrd('',$user_id); 
+    setdialog($user_id,"non");
+    $msg = "{$country} {$city} {$title}";
+    vkApi_messagesSend($user_id, $title,'',$keyboard);
+  }
   $fwd = $data['fwd_messages'];
   if(!empty($fwd))
       {

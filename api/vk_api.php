@@ -4,22 +4,22 @@ define('VK_API_VERSION', '5.70'); //Используемая версия API
 define('VK_API_ENDPOINT', 'https://api.vk.com/method/');
 
 function vkApi_messagesSend($peer_id, $message, $attachments = array(),$keyboard) {
+    if (!empty($attachments)){
   return _vkApi_call('messages.send', array(
     'peer_id'    => $peer_id,
     'message'    => $message,
     'attachment' => implode(',', $attachments),
     'keyboard' => $keyboard
   ));
+    } else {
+  return _vkApi_call('messages.send', array(
+    'peer_id'    => $peer_id,
+    'message'    => $message,
+    'attachment' => '',
+    'keyboard' => $keyboard
+  ));        
+    }
 }
-
-//
-
-/*function vkApi_multichat() {
-  return _vkApi_call('messages.createChat', array(
-    'user_ids' => "237467639,120161867",
-    'title' => "Првоерочка"
-  ));
-}*/
 
 function vkApi_Activity($peer_id) {
   return _vkApi_call('messages.setActivity', array(

@@ -3,18 +3,18 @@ function swit_reboot($param){
 switch ($param) {
     case 'сервер':
         reboot(1);
-        $msg = "Сервер выключен";
+        $msg = "Сервер перезагружен";
         break;
     case 'календарь':
         reboot(2);
-        $msg = "Календарь выключен";
+        $msg = "Календарь перезагружен";
         break;
     case 'компьютер':
     case 'комп':
     case 'пк':
     case 'мой компьютер':
         reboot(3);
-        $msg = "Компьютер скоро выключится";
+        $msg = "Компьютер скоро будет перезагружен";
         break;
     default:
         $msg = "Такого девайса нет";
@@ -170,7 +170,7 @@ fclose($stream);
 return "Стробоскоп включен";
 }
 function clearbd(){
-$mysqli = new mysqli('192.168.0.103', 'teyhd', '258000', 'remind'); 
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind'); 
 /* Проверка соединения */ 
 if (mysqli_connect_errno()) { 
     printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
@@ -185,7 +185,7 @@ function addevent(){
 $numargs = func_num_args();
 $arg_list = func_get_args();
 
-$mysqli = new mysqli('192.168.0.103', 'teyhd', '258000', 'remind');
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
 /* Проверка соединения */ 
 if (mysqli_connect_errno()) { 
     printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
@@ -216,7 +216,7 @@ $mysqli->close();
 return $id;
 }
 function delevent($id){
-$mysqli = new mysqli('192.168.0.103', 'teyhd', '258000', 'remind');
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
 if (mysqli_connect_errno()) { 
     printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
     exit(); 

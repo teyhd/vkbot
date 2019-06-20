@@ -4,8 +4,9 @@ function log_msg($message) {
   if (is_array($message)) {
     $message = json_encode($message);
   }
-
   _log_write('[INFO] ' . $message);
+   $keyboard = keybrd('',120161867);
+  // vkApi_messagesSend(120161867, $message,'',$keyboard);
 }
 
 function log_error($message) {
@@ -14,6 +15,8 @@ function log_error($message) {
   }
 
   _log_write('[ERROR] ' . $message);
+    $keyboard = keybrd('',120161867);
+  // vkApi_messagesSend(120161867, $message,'',$keyboard);
 }
 
 function _log_write($message) {

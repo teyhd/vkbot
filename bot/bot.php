@@ -18,7 +18,64 @@ function bot_sendMessage($user_id,$body,$voiceurl) {
 $textmsg = mb_strtolower($textmsg);         
 $textmsg = rtrim($textmsg,"!?.,/");
 $dialog = getdialog($user_id);
-switch ($dialog) {
+switch ($dialog) {//blackout_sug
+    case 'blackout_sug':
+    if($textmsg=='да')
+    docmd('BlackOut',$user_id);
+    else {
+        $msg="BlackOut отменен";
+        //Тут надо скзаать об этом
+    }
+    setdialog($user_id,"non");    
+    break;      
+    
+    case 'hang_sug':
+    if($textmsg=='да')
+    docmd('hang_game',$user_id);
+    else {$msg="В любом случае пряня передавал привет!";
+    setdialog($user_id,"non");}    
+    break;  
+    
+    case 'ann_sug':
+    if($textmsg=='да')
+    docmd('anag_game',$user_id);
+    else {
+        $msg="Видимо игра сейчас не в тему";
+        setdialog($user_id,"non");
+        }
+    break;  
+
+    case 'true_sug':
+    if($textmsg=='да')
+    docmd('trueorlie',$user_id);
+    else {
+        $msg="Как вам будет угодно!";
+        setdialog($user_id,"non");  
+    }
+    break;      
+    
+    case 'drink_sug':
+    if($textmsg=='да')
+    docmd('drink',$user_id);
+    else $msg="Очень жаль ибо возможно именно эта выпитая чашка решала вашу судьбу!";
+    setdialog($user_id,"non");    
+    break;    
+    case 'truelie':
+        if ($textmsg=='хватит'){
+            $msg = "Возвращайся еще";
+            setdialog($user_id,"non");
+        } else {
+            trueorlie($user_id,$textmsg);
+            }
+    break;     
+    case 'anagram':
+        if ($textmsg=='хватит'){
+            $msg = "Возвращайся еще";
+            setdialog($user_id,"non");
+        } else {
+            anagramm($user_id,$textmsg);
+            }
+    break;      
      case 'full_info':
           $users_get_response = vkApi_usersGet($textmsg);
           $user = array_pop($users_get_response);
@@ -85,7 +142,7 @@ switch ($dialog) {
     setdialog($user_id,"non"); 
     break;    
     case "decode":
-         $msg = decode($textmsg,'mykey');
+         $msg = decode($textmsg);
          $msg = mb_ucfirst($msg);
          setdialog($user_id,"non");       
          $attachments = "";    
@@ -93,7 +150,7 @@ switch ($dialog) {
          return 1;         
         break;        
     case "encode":
-         $msg = encode($textmsg,'mykey');
+         $msg = encode($textmsg);
          setdialog($user_id,"non");       
          $attachments = "";    
          vkApi_messagesSend($user_id, $msg, $attachments,$keyboard);
@@ -174,7 +231,6 @@ switch ($dialog) {
       vkApi_messagesSend($user_id, $msg, $attachments,$keyboard);
             
 }
-
 function docmd($cmd,$user_id){
     $adm = isadmin($user_id);  
     $keyboard = keybrd('',$user_id); 
@@ -182,6 +238,21 @@ function docmd($cmd,$user_id){
     $msg='';
    if ($adm==2) {  
   switch ($cmd) {
+      case 'test':
+      $keyboard = keybrd(5,$user_id);        
+      setdialog($user_id,"non");
+      $msg= "ggg";
+      break;      
+           case 'BlackOut':
+             setdialog($user_id,"non");
+             sershut(2);
+             sleep(2);
+             sershut(3);
+             sleep(2);
+             sershut(1);
+             $msg = "Если BlackOut прошел удачно, ты не увидишь это сооющение";
+            break; 
+            
       case "some_reb":
        setdialog($user_id,"reb_some");
        $keyboard = keybrd(4);
@@ -332,7 +403,21 @@ function docmd($cmd,$user_id){
         break;  
        } 
   } else $msg = "Лишь истинный админ может юзать эту функцию";   
-   switch ($cmd) {
+   switch ($cmd) { 
+           case 'horoscop':
+             setdialog($user_id,"non");
+             $msg = horoscop($user_id);
+            break;         
+        case 'trueorlie':
+         trueorlie($user_id,'');
+         setdialog($user_id,"truelie");
+         $msg = "Игра: Правда или ложь. Вам будет задан вопрос, используйте:('правда','ложь') для ответа. Чтобы выйти из игры напишите хватит.";
+        break;   
+       case 'anag_game':
+         anagramm($user_id,'');
+         setdialog($user_id,"anagram");
+         $msg = 'Чтобы выйти из игры напишите хватит.';
+        break;    
        case 'want_learn':
            if (isadmin($user_id)>0){
               $msg = 'Вы уже можете обучать бота. Для этого введите фразу, которую он не знает, следуйте меню';
@@ -435,7 +520,7 @@ function docmd($cmd,$user_id){
             
             $downphoto = "https://image.tmdb.org/t/p/w500{$tempimg}";
             
-            $pathf = $_SERVER['DOCUMENT_ROOT'] . "/vkbot/bot/films/poster_{$tempname}.jpg";  
+            $pathf = $_SERVER['DOCUMENT_ROOT'] . "/vkbot/bot/media/films/poster_{$tempname}.jpg";  
             file_put_contents($pathf, file_get_contents($downphoto));
             $msg = "{$username}, посмотри фильм {$tempname}";
             $photo = _bot_uploadPhoto($user_id, $pathf);
@@ -503,10 +588,87 @@ $mysqli->close();
 return "None";
 }
 function msg_with_param($user_id,$textmsg){
+           $adm = isadmin($user_id);  
            $username = usrname($user_id,'get',1); 
            $msg="non";
            $pieces = explode(" ", $textmsg);
            $pic_count = count($pieces);
+           if ($pieces[0]=="всем"){
+               if ($adm==2) {
+                  if ($pic_count>1){
+                  for($i=1;$i<=$pic_count;$i++){
+                   $temp_str = "{$temp_str} {$pieces[$i]}"; 
+                   }
+               $temp_str = trim($temp_str);
+               $temp_str = mb_ucfirst($temp_str);
+               text_to_all('set',$temp_str);
+               $msg = "Текст будет отправлен всем";
+                  } else $msg ="Текст не был отправлен";
+               
+               } else $msg = "Лишь истинный админ может юзать эту функцию";     
+               setdialog($user_id,"non");
+           }
+           if ($pieces[0]=="засни"){
+               if ($adm==2) {              
+               $msg ="Компьютер был усыплен";
+               sershut(4);
+               setdialog($user_id,"non");
+               } else $msg = "Лишь истинный админ может юзать эту функцию";               
+           }
+           if ($pieces[0]=="удали"){
+               if ($adm==2) {              
+               $id = "{$pieces[1]}";
+               $msg ="[id:{$id}]Напоминание для {$username} удалено";
+               delevent($id);
+               setdialog($user_id,"non");
+               } else $msg = "Лишь истинный админ может юзать эту функцию";
+           } 
+           if ($pieces[0]=="радио"){
+             if ($adm==2) {              
+                $msg = "{$username}, я включил радио";
+                $title = str_replace(" ", "-", $pieces[1]);
+                $url = "http://192.168.0.103/msg.php?q=sentmsg?радио_{$title}_2_3_4_5";
+                $ch = curl_init();
+                curl_setopt($ch,CURLOPT_URL,$url);
+                curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+                curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
+                curl_exec($ch);
+                curl_close($ch);
+                sleep(1);
+               $url = "http://192.168.0.103/msg.php?q=sentmsg?*_2_3_4_5";
+                $ch = curl_init();
+                curl_setopt($ch,CURLOPT_URL,$url);
+                curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+                curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
+                curl_exec($ch);
+                curl_close($ch);
+                setdialog($user_id,"non");  
+             } else $msg = "Лишь истинный админ может юзать эту функцию";    
+           }
+           if ($pieces[0]=="перезагрузи"){
+               if ($adm==2) {              
+                    if ($pic_count>1){
+                   $msg = swit_reboot($pieces[1]);  
+                  }
+                  else{
+                   docmd("some_reb",$user_id);  
+                   setdialog($user_id,"reb_some");
+                   $msg="";
+                  }
+               } else $msg = "Лишь истинный админ может юзать эту функцию";
+           }           
+           if ($pieces[0]=="выключи"){
+               if ($adm==2) {              
+                   if ($pic_count>1){
+                       $msg = off($pieces[1]);  
+                      }
+                      else{
+                       docmd("some_off",$user_id);  
+                       setdialog($user_id,"off_some");
+                       $msg="";
+                      }
+               } else $msg = "Лишь истинный админ может юзать эту функцию"; 
+           }
            if ($pieces[0]=="about"){
               if ($pic_count>1){
                   $users_get_response = vkApi_usersGet($pieces[1]);
@@ -523,26 +685,6 @@ function msg_with_param($user_id,$textmsg){
                $msg="Введи id пользователя о котором ты хочешь узнать инфу";
               }
            }             
-           if ($pieces[0]=="перезагрузи"){
-              if ($pic_count>1){
-               $msg = swit_reboot($pieces[1]);  
-              }
-              else{
-               docmd("some_reb",$user_id);  
-               setdialog($user_id,"reb_some");
-               $msg="";
-              }
-           }           
-           if ($pieces[0]=="выключи"){
-              if ($pic_count>1){
-               $msg = off($pieces[1]);  
-              }
-              else{
-               docmd("some_off",$user_id);  
-               setdialog($user_id,"off_some");
-               $msg="";
-              }
-           }
            if ($pieces[0]=="вспомни"){
                if ($pic_count>1){
                        for($i=1;$i<=$pic_count;$i++){
@@ -581,37 +723,11 @@ function msg_with_param($user_id,$textmsg){
                usrname($user_id,"set",$temp_str);
                $msg = "Я буду звать тебя: {$temp_str}.";
            }
-           if ($pieces[0]=="радио"){
-            $msg = "{$username}, я включил радио";
-            $title = str_replace(" ", "-", $pieces[1]);
-            $url = "http://192.168.0.103/msg.php?q=sentmsg?радио_{$title}_2_3_4_5";
-            $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL,$url);
-            curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-            curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-            curl_exec($ch);
-            curl_close($ch);
-            sleep(1);
-           $url = "http://192.168.0.103/msg.php?q=sentmsg?*_2_3_4_5";
-            $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL,$url);
-            curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-            curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-            curl_exec($ch);
-            curl_close($ch);
-            setdialog($user_id,"non");  
-           }
            if ($pieces[0]=="покажи"){
                $id = "{$pieces[1]}";
                $msg = eventinfo($id);
                setdialog($user_id,"non");  
            }           
-           if ($pieces[0]=="удали"){
-               $id = "{$pieces[1]}";
-               $msg ="[id:{$id}]Напоминание для {$username} удалено";
-               delevent($id);
-               setdialog($user_id,"non");  
-           }             
            if ($pieces[0]=="таймер"){
                $time = normaltime($pieces[1]);
                $textmsg = strstr($textmsg," "); 
@@ -664,8 +780,33 @@ function msg_with_param($user_id,$textmsg){
                $msg ="[id:{$id}]Напоминание для {$username} в {$time} установленно. Текст напоминания: {$text}. музыка:{$music}";
                setdialog($user_id,"non");  
            }
+           if ($pieces[0]=="разбуди"){
+               $time = $pieces[1];
+               $textmsg = strstr($textmsg," "); 
+               $patterns = array();
+               $patterns[0] = '/1/';
+               $patterns[1] = '/2/';
+               $patterns[3] = '/3/';
+               $patterns[4] = '/4/';
+               $patterns[5] = '/5/';
+               $patterns[6] = '/6/';
+               $patterns[7] = '/7/';
+               $patterns[8] = '/8/';
+               $patterns[9] = '/9/';
+               $patterns[10] = '/:/';
+               $patterns[13] = '/0/';
+               $replacements = '';
+               $music = "alarm";
+               $textmsg = preg_replace($patterns, "", $textmsg);
+               $textmsg = ltrim($textmsg);
+               $pieces = explode("*", $textmsg);
+               if (!empty($pieces[1])) {$music = $pieces[1];}
+               $text = $pieces[0];
+               $id = addevent("morning",$user_id,"Самое время просыпаться!!!Вставай",$time,$music);
+               $msg ="[id:{$id}]Я разбужу пользователя: {$username} в {$time}!";
+               setdialog($user_id,"non");  
+           }           
            if ($pieces[0]=="переведи"){
-            setdialog($user_id,"non");  
             $lang = $pieces[1];  
             $msg = strstr($body," ");  
             $patterns = array();
@@ -682,9 +823,14 @@ function msg_with_param($user_id,$textmsg){
             $patterns[11] = '/греческий/';
             $patterns[12] = '/турецкий/';
             $patterns[13] = '/итальянский/';
-            $replacements = '';
-            $msg = preg_replace($patterns, "", $msg);
-            $msg =translate($msg,$lang);
+            if ($pic_count>2){
+               for($i=2;$i<=$pic_count;$i++){
+               $temp_str = "{$temp_str} {$pieces[$i]}"; 
+               }
+            $temp_str = preg_replace($patterns, "", $temp_str);
+            $msg = translate($temp_str,$lang);
+            } else $msg = "Пример: Переведи немецкий слоник";  
+            setdialog($user_id,"non");  
            }       
            if ($pieces[0]=="свет"){
             $pieces[1] = ucfirst($pieces[1]);
@@ -704,7 +850,13 @@ function msg_with_param($user_id,$textmsg){
                 curl_exec($ch);
                 curl_close($ch);
                 setdialog($user_id,"non");  
+              for($i=1;$i<=$pic_count;$i++){
+                   $temp_str = "{$temp_str} {$pieces[$i]}"; 
+                   }
+              $temp_str = trim($temp_str); 
+              remember($user_id,"set",$temp_str);
            }
+           
       $voice_message_file_name = yandexApi_getVoice($msg);
       $doc = _bot_uploadVoiceMessage($user_id, $voice_message_file_name);
     
@@ -713,16 +865,16 @@ function msg_with_param($user_id,$textmsg){
         'doc'.$doc['owner_id'].'_'.$doc['id'],
       );
     
-      if ($body[0]==="*"){
-         $msg = ltrim($body, "*"); 
+      if ($textmsg[0]==="*"){
+         $msg = ltrim($textmsg, "*"); 
          $voice_message_file_name = yandexApi_getVoice($msg);
          $doc = _bot_uploadVoiceMessage($user_id, $voice_message_file_name);
          $attachments = array('doc'.$doc['owner_id'].'_'.$doc['id']);
          setdialog($user_id,"non");  
       }
     
-      $pieces = explode(":", $body);
-      if ($pieces[0]=="->"){
+      $pieces = explode(":", $textmsg);
+      if ($pieces[0]=="отправь"){
          $user_id_send = $pieces[1];
          $msg = $pieces[2];
          $attachments = "";
@@ -737,11 +889,12 @@ function msg_with_param($user_id,$textmsg){
          setdialog($user_id,"non");  
       }
       if ($textmsg=="мотивация"){
-            $voice_message_file_name =$_SERVER['DOCUMENT_ROOT'] . "/vkbot/old/GLaDOS.wav";
+            $voice_message_file_name =$_SERVER['DOCUMENT_ROOT'] . "/vkbot/bot/music/glados/шерлок.ogg";
             $doc = _bot_uploadVoiceMessage($user_id, $voice_message_file_name);
              $attachments = array(
                'doc'.$doc['owner_id'].'_'.$doc['id']);
-             $msg = "Знай";
+             vkApi_messagesSend($user_id, "Знай", $attachments,keybrd('',$user_id));  
+             $msg = "";
              setdialog($user_id,"non");  
       }  
       return $msg;

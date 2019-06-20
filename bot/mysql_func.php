@@ -1,4 +1,109 @@
 <?php
+function text_to_all($mod,$text){
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
+/* Проверка соединения */ 
+if (mysqli_connect_errno()) { 
+    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
+    exit(); 
+}  
+if($mod=="set"){
+    $stmt = $mysqli->prepare("UPDATE text_to_all SET text='{$text}' WHERE id=0"); 
+    $stmt->bind_param('s', $text); 
+    
+    $stmt->execute(); 
+    $stmt->close();
+}
+if($mod=="get"){
+    
+if ($stmt = $mysqli->prepare("SELECT text FROM text_to_all WHERE id=0")) { 
+    $stmt->execute(); 
+    $stmt->bind_result($col1); 
+    while ($stmt->fetch()) { 
+        $text = $col1;
+    } 
+    $stmt->close(); 
+}
+//
+}
+$mysqli->close(); 
+return $text;
+}
+function send_to_all($text){
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
+/* Проверка соединения */ 
+if (mysqli_connect_errno()) { 
+    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
+    exit(); 
+} 
+
+if ($stmt = $mysqli->prepare("SELECT user_id FROM dialog WHERE user_id LIKE '%' ")) { 
+    $stmt->execute(); 
+    $stmt->bind_result($col1); 
+    while ($stmt->fetch()) { 
+       $user_id = $col1;
+       if ($user_id!==null){
+           send_msg($user_id,$text);
+           sleep(3);
+        }
+    } 
+    $stmt->close(); 
+}
+$mysqli->close(); 
+return ("Отправлен тескт: {$text} вот этому перцу {$isadmin}\n");
+}//Рассылка текста
+function rand_adv(){
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
+/* Проверка соединения */ 
+if (mysqli_connect_errno()) { 
+    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
+    exit(); 
+} 
+if ($stmt = $mysqli->prepare("SELECT max(id) FROM advice WHERE id")) { 
+    $stmt->execute(); 
+    $stmt->bind_result($col1); 
+    while ($stmt->fetch()) { 
+        $id = $col1;
+    } 
+    $stmt->close(); 
+}
+$num = rand(0,$id);
+    if ($stmt = $mysqli->prepare("SELECT adv_text FROM advice WHERE id={$num}")) { 
+        $stmt->execute(); 
+        $stmt->bind_result($col1); 
+        while ($stmt->fetch()) { 
+            $advice = $col1;
+        } 
+        $stmt->close(); 
+    }
+ $mysqli->close(); 
+return $advice;         
+}
+function mysql_horoscop($mod,$sign,$text){
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
+/* Проверка соединения */ 
+if (mysqli_connect_errno()) { 
+    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
+    exit(); 
+}  
+    if($mod=="set"){
+        $stmt = $mysqli->prepare("UPDATE horoscop SET `{$sign}`='{$text}' WHERE `{$sign}`=`{$sign}`"); 
+        $stmt->bind_param('ss', $sign,$text); 
+        $stmt->execute(); 
+        $stmt->close();
+    }
+    if($mod=="get"){
+        if ($stmt = $mysqli->prepare("SELECT {$sign} FROM horoscop WHERE {$sign}={$sign}")) { 
+            $stmt->execute(); 
+            $stmt->bind_result($col1); 
+            while ($stmt->fetch()) { 
+                $sign = $col1;
+            } 
+            $stmt->close(); 
+        }
+    }
+$mysqli->close(); 
+return $sign;
+}
 function remember($user_id,$mod,$text){
 $mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
 /* Проверка соединения */ 
