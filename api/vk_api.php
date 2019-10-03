@@ -4,6 +4,7 @@ define('VK_API_VERSION', '5.70'); //Используемая версия API
 define('VK_API_ENDPOINT', 'https://api.vk.com/method/');
 
 function vkApi_messagesSend($peer_id, $message, $attachments = array(),$keyboard) {
+try {
     if (!empty($attachments)){
   return _vkApi_call('messages.send', array(
     'peer_id'    => $peer_id,
@@ -20,11 +21,32 @@ function vkApi_messagesSend($peer_id, $message, $attachments = array(),$keyboard
   ));        
     }
 }
+catch (Exception $e) {
+    $e= $e->getMessage();
+    log_msg($e);
+}
+
+}
 
 function vkApi_Activity($peer_id) {
   return _vkApi_call('messages.setActivity', array(
     'peer_id' => $peer_id,
     'type' => "audiomessage"
+  ));
+}
+function vkApi_changeIp($newIp) {
+  return _vkApi_call('groups.editCallbackServer', array(
+    'group_id' => 178013145,
+    'server_id' => 9,
+    'url' => "http://{$newIp}/vkbot/",
+    'title' => "Bot",
+    'v' => "5.101"
+  ));
+}
+function vkApi_aplayIp() {
+  return _vkApi_call('groups.getCallbackConfirmationCode', array(
+    'group_id' => 178013145,
+    'v' => "5.101"
   ));
 }
 

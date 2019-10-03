@@ -1,4 +1,41 @@
 <?php
+function bd_ip($mode,$temp){
+    $mysqli = new mysqli('localhost', 'teyhd', '258000', 'snake');
+/* Проверка соединения */ 
+if (mysqli_connect_errno()) { 
+    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
+    exit(); 
+}  
+if($mode=="set"){
+    $stmt = $mysqli->prepare("UPDATE ip SET ip='{$temp}' WHERE ip"); 
+    $stmt->bind_param('s', $temp); 
+    $stmt->execute(); 
+    $stmt->close();
+    if ($stmt = $mysqli->prepare("SELECT ip FROM ip WHERE ip")) { 
+        $stmt->execute(); 
+        $stmt->bind_result($col1); 
+        while ($stmt->fetch()) { 
+            $ans = $col1;
+        } 
+        $stmt->close(); 
+    }    
+    
+}
+if($mode=="get"){
+    
+    if ($stmt = $mysqli->prepare("SELECT ip FROM ip WHERE ip")) { 
+        $stmt->execute(); 
+        $stmt->bind_result($col1); 
+        while ($stmt->fetch()) { 
+            $ans = $col1;
+        } 
+        $stmt->close(); 
+    }
+//
+}
+$mysqli->close(); 
+return $ans;
+}
 function text_to_all($mod,$text){
 $mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
 /* Проверка соединения */ 
@@ -179,22 +216,7 @@ function usrname($user_id,$mod,$value){
     if($nickname!=='None') return $nickname; else return $VK_username;
      $mysqli->close();
 }
-function set_admin($user_id,$Dial_type){
-$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
-/* Проверка соединения */ 
-if (mysqli_connect_errno()) { 
-    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
-    exit(); 
-} 
 
-    $stmt = $mysqli->prepare("UPDATE dialog SET isadmin='{$Dial_type}' WHERE user_id=$user_id"); 
-    $stmt->bind_param('ds', $user_id,$Dial_type); 
-    
-    $stmt->execute(); 
-    $stmt->close();
-$mysqli->close(); 
-return 1;
-}
 function isadmin($user_id){
 $mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
 /* Проверка соединения */ 
@@ -217,6 +239,22 @@ if ($isadmin==null){
     }
 $mysqli->close(); 
 return $isadmin;
+}
+function set_admin($user_id,$Dial_type){
+$mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
+/* Проверка соединения */ 
+if (mysqli_connect_errno()) { 
+    printf("Подключение невозможно: %s\n", mysqli_connect_error()); 
+    exit(); 
+} 
+
+    $stmt = $mysqli->prepare("UPDATE dialog SET isadmin='{$Dial_type}' WHERE user_id=$user_id"); 
+    $stmt->bind_param('ds', $user_id,$Dial_type); 
+    
+    $stmt->execute(); 
+    $stmt->close();
+$mysqli->close(); 
+return 1;
 }
 function getdialog($user_id){
 $mysqli = new mysqli('localhost', 'teyhd', '258000', 'remind');
@@ -268,7 +306,7 @@ if (mysqli_connect_errno()) {
 } 
 
     $stmt = $mysqli->prepare("UPDATE dialog SET dial_type='{$Dial_type}' WHERE user_id=$user_id"); 
-    $stmt->bind_param('ds', $user_id,$Dial_type); 
+    $stmt->bind_param('sd', $Dial_type,$user_id); 
     
     $stmt->execute(); 
     $stmt->close();

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<script type="text/javascript" src="js/prob.js"></script>
+
 <div id="shad">  </div>
 <div>    </div>
 <div>    </div>

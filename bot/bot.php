@@ -238,6 +238,10 @@ function docmd($cmd,$user_id){
     $msg='';
    if ($adm==2) {  
   switch ($cmd) {
+      case "my_ip":
+          $msg = bd_ip('get','1');
+          setdialog($user_id,"non");
+      break;
       case 'test':
       $keyboard = keybrd(5,$user_id);        
       setdialog($user_id,"non");
@@ -264,23 +268,11 @@ function docmd($cmd,$user_id){
        $msg = "{$username}, что ты хочешь выключить???";   
       break;      
       case "clearscr":
-            $url = "http://192.168.0.103/msg.php?q=sentmsg?*";
-            $ch = curl_init();
-            curl_setopt($ch,CURLOPT_URL,$url);
-            curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-            curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-            curl_exec($ch);
-            curl_close($ch);
+            send_msg('Прочел');
        break;  
     case "read":    
         led(0);
-        $url = "http://192.168.0.103/msg.php?q=sentmsg?*";
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL,$url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-        curl_exec($ch);
-        curl_close($ch);
+        send_msg('Прочел');
         break; 
   
     case "offlight":    
@@ -322,40 +314,10 @@ function docmd($cmd,$user_id){
       }
       break;          
      case "quiet":    
-    $url = "http://192.168.0.103/msg.php?q=sentmsg?music_0_2_3_4_5";
-    $ch = curl_init();
-    curl_setopt($ch,CURLOPT_URL,$url);
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-    curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-    curl_exec($ch);
-    curl_close($ch);
-    sleep(1);
-   $url = "http://192.168.0.103/msg.php?q=sentmsg?*_2_3_4_5";
-    $ch = curl_init();
-    curl_setopt($ch,CURLOPT_URL,$url);
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-    curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-    curl_exec($ch);
-    curl_close($ch);
+    send_mus('Тишина');
       break;          
     case "pageupd":           
-        $url = "http://192.168.0.103/msg.php?q=sentmsg?обнови_4_2_3_4_5";
-        $msg = "Страница обновлена";
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL,$url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-        curl_exec($ch);
-        curl_close($ch);
-        sleep(1);
-       $url = "http://192.168.0.103/msg.php?q=sentmsg?обновил_4_2_3_4_5";
-        $msg = "Страница обновлена";
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL,$url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-        curl_exec($ch);
-        curl_close($ch);
+        send_cmd('обнови');
       break;  
     case "strobe":     
         $msg = strobe();
@@ -363,23 +325,9 @@ function docmd($cmd,$user_id){
 
     case "drink":
                bot_sendSticker($user_id,"16"); 
-               $url = "http://192.168.0.103/msg.php?q=sentmsg?music_coffee.mp3_2_3_4_5";
-               $ch = curl_init();
-               curl_setopt($ch,CURLOPT_URL,$url);
-               curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-               curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-               curl_exec($ch);
-               curl_close($ch);
-               sleep(1);
-               $url = "http://192.168.0.103/msg.php?q=sentmsg?*_2_3_4_5";
-               $ch = curl_init();
-               curl_setopt($ch,CURLOPT_URL,$url);
-               curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-               curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-               curl_exec($ch);
-               curl_close($ch);
+               send_mus('music_coffee.mp3');
                $text = "Напиток готов";    
-               $time = normaltime("15");
+               $time = normaltime("10");
                $music = "coffee";
                $id = addevent("coffee",$user_id,$text,$time,$music);
                coffee(1);
@@ -608,10 +556,11 @@ function msg_with_param($user_id,$textmsg){
                } else $msg = "Лишь истинный админ может юзать эту функцию";     
                setdialog($user_id,"non");
            }
-           if ($pieces[0]=="засни"){
-               if ($adm==2) {              
-               $msg ="Компьютер был усыплен";
-               sershut(4);
+           if ($pieces[0]=="усни"){
+               if ($adm==2) {    
+                   if ($pic_count>1){
+                     $msg = swit_sleep($pieces[1]);
+                       }  else $msg = "Напиши устройство";
                setdialog($user_id,"non");
                } else $msg = "Лишь истинный админ может юзать эту функцию";               
            }
@@ -627,20 +576,7 @@ function msg_with_param($user_id,$textmsg){
              if ($adm==2) {              
                 $msg = "{$username}, я включил радио";
                 $title = str_replace(" ", "-", $pieces[1]);
-                $url = "http://192.168.0.103/msg.php?q=sentmsg?радио_{$title}_2_3_4_5";
-                $ch = curl_init();
-                curl_setopt($ch,CURLOPT_URL,$url);
-                curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-                curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-                curl_exec($ch);
-                curl_close($ch);
-                sleep(1);
-               $url = "http://192.168.0.103/msg.php?q=sentmsg?*_2_3_4_5";
-                $ch = curl_init();
-                curl_setopt($ch,CURLOPT_URL,$url);
-                curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-                curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-                curl_exec($ch);
+                //todo
                 curl_close($ch);
                 setdialog($user_id,"non");  
              } else $msg = "Лишь истинный админ может юзать эту функцию";    
@@ -839,20 +775,14 @@ function msg_with_param($user_id,$textmsg){
             setdialog($user_id,"non");  
            }       
            if ($pieces[0]=="запиши"){
-                /*$msg = ltrim($textmsg, "запиши ");*/
-                $pieces[1] = ucfirst($pieces[1]);
-                $url = "http://192.168.0.103/msg.php?q=sentmsg?{$pieces[1]}_{$pieces[2]}_{$pieces[3]}_{$pieces[4]}_{$pieces[5]}";
+               if ($pic_count>1){
+                       for($i=1;$i<=$pic_count;$i++){
+                       $temp_str = "{$temp_str} {$pieces[$i]}"; 
+                       }}
+                  $temp_str = trim($temp_str); 
+                send_msg($temp_str);
                 $msg = "Сообщение успешно отправлено!";
-                $ch = curl_init();
-                curl_setopt($ch,CURLOPT_URL,$url);
-                curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-                curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-                curl_exec($ch);
-                curl_close($ch);
                 setdialog($user_id,"non");  
-              for($i=1;$i<=$pic_count;$i++){
-                   $temp_str = "{$temp_str} {$pieces[$i]}"; 
-                   }
               $temp_str = trim($temp_str); 
               remember($user_id,"set",$temp_str);
            }

@@ -16,6 +16,10 @@ switch ($param) {
         reboot(3);
         $msg = "Компьютер скоро будет перезагружен";
         break;
+      case 'ноутбук':
+    reboot(4);
+    $msg = "Ноутбук скоро будет перезагружен";
+    break;          
     default:
         $msg = "Такого девайса нет";
         break;
@@ -43,11 +47,35 @@ switch ($param) {
         sershut(3);
         $msg = "Компьютер скоро выключится";
         break;
+   case 'ноутбук':
+    sershut(4);
+    $msg = "Ноутбук скоро будет выключен";
+    break;     
     case 'кофеварка':
     case 'кофеварку':
         coffee(0);
         $msg = "Кофееварка выключена";
         break;
+    default:
+        $msg = "Такого девайса нет";
+        break;
+}    
+   return $msg;  
+}
+function swit_sleep($param){
+switch ($param) {
+    case 'компьютер':
+    case 'комп':
+    case 'пк':
+    case 'мой компьютер':
+        d_sleep(1);
+        $msg = "Компьютер скоро уснет";
+        break;
+   case 'ноутбук':
+    case 'ноут':       
+    d_sleep(2);
+    $msg = "Ноутбук скоро уснет";
+    break;     
     default:
         $msg = "Такого девайса нет";
         break;
@@ -69,6 +97,11 @@ function reboot($par){
         $connection = ssh2_connect('192.168.0.105', 22);
         ssh2_auth_password($connection, 'spiderman201010@mail.ru', 'Vlad281000');
         $stream = ssh2_exec($connection, "shutdown -r");    
+    }
+    if ($par==4)  {
+    $connection = ssh2_connect('192.168.0.108', 22);
+    ssh2_auth_password($connection, 'spiderman201010@mail.ru', 'Vlad281000');
+    $stream = ssh2_exec($connection, "shutdown -r");    
     }
 $errorStream = ssh2_fetch_stream($stream, SSH2_STREAM_STDERR);
 stream_set_blocking($errorStream, true);
@@ -93,9 +126,28 @@ function sershut($par){
         $stream = ssh2_exec($connection, "shutdown -s -t 10");    
     }
     if ($par==4) {
+        $connection = ssh2_connect('192.168.0.108', 22);
+        ssh2_auth_password($connection, 'spiderman201010@mail.ru', 'Vlad281000');
+        $stream = ssh2_exec($connection, "shutdown -s -t 10"); 
+        return 1;
+    }
+$errorStream = ssh2_fetch_stream($stream, SSH2_STREAM_STDERR);
+stream_set_blocking($errorStream, true);
+stream_set_blocking($stream, true);
+fclose($errorStream);
+fclose($stream);
+return 1;
+}
+function d_sleep($par){
+    if ($par==1)  {
         $connection = ssh2_connect('192.168.0.105', 22);
         ssh2_auth_password($connection, 'spiderman201010@mail.ru', 'Vlad281000');
-        $stream = ssh2_exec($connection, "shutdown /h"); 
+        $stream = ssh2_exec($connection, "shutdown -H");    
+    }
+    if ($par==2) {
+        $connection = ssh2_connect('192.168.0.108', 22);
+        ssh2_auth_password($connection, 'spiderman201010@mail.ru', 'Vlad281000');
+        $stream = ssh2_exec($connection, "shutdown -H"); 
         return 1;
     }
 $errorStream = ssh2_fetch_stream($stream, SSH2_STREAM_STDERR);
