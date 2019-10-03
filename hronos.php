@@ -17,22 +17,22 @@ define("SUGG_INTERVAL",30);
 define("ADMIN_ID",120161867);
 echo("Запущен протокол hronos\n");
 musicon("/glados/wakeup01");
-send_msg(ADMIN_ID,"Сервер включен. Загрузка настроек...");
+sendu_msg(ADMIN_ID,"Сервер включен. Загрузка настроек...");
 check_ip();
 sleep(2);
 musicon("/glados/wakeup02");
-send_msg(ADMIN_ID,"Натсройки успешно загружены!");
+sendu_msg(ADMIN_ID,"Натсройки успешно загружены!");
 sleep(1);
-send_msg(ADMIN_ID,"Инициализация модуля персональности..."); //hubstage01a01.mp3
+sendu_msg(ADMIN_ID,"Инициализация модуля персональности..."); //hubstage01a01.mp3
 musicon("/glados/bootupsequence12");
 sleep(2);
-send_msg(ADMIN_ID,"Данные успешно загружены!");
+sendu_msg(ADMIN_ID,"Данные успешно загружены!");
 musicon("/glados/hubstage01a01");
 sleep(6); 
-send_msg(ADMIN_ID,"Запуск протокола хронос...");//bootupsequence1801
+sendu_msg(ADMIN_ID,"Запуск протокола хронос...");//bootupsequence1801
 musicon("/glados/bootupsequence13");
 sleep(5); 
-send_msg(ADMIN_ID,"Протокол хронос успешно запущен!");
+sendu_msg(ADMIN_ID,"Протокол хронос успешно запущен!");
 musicon("/glados/bootupsequence1801");
 $temp_text = 'none';
 $sugg_time_count = 0;
@@ -44,13 +44,13 @@ $sec = date("s");
 
 if (($hours=="00")&&($min=="10")&&($sec=="00")) { //00:05:00 Обновление гороскопа
     s_horoscop();
-    send_msg(ADMIN_ID,"Гороскопы успешно обновлены. Сейчас отправим ваш!");
-    send_msg(ADMIN_ID,horoscop(ADMIN_ID));
+    sendu_msg(ADMIN_ID,"Гороскопы успешно обновлены. Сейчас отправим ваш!");
+    sendu_msg(ADMIN_ID,horoscop(ADMIN_ID));
 }
 
 if (($hours=="13")&&($min=="00")&&($sec=="00")) { //13:00:00 Рассылка гороскопа
     hroscop_to_users();
-    send_msg(ADMIN_ID,"Рассылка гороскопов пользователям прошла успешно");
+    sendu_msg(ADMIN_ID,"Рассылка гороскопов пользователям прошла успешно");
 }
 
 if (($hours=="00")&&($min=="00")&&($sec=="00")) { //Выключение всего hubstage01a05_01
@@ -151,7 +151,7 @@ sleep(1);
 function check_ip(){
     if (new_ip()<>bd_ip('get','1')){
     bd_ip('set',new_ip());
-    send_msg(ADMIN_ID,bd_ip('get','1'));
+    sendu_msg(ADMIN_ID,bd_ip('get','1'));
     vkApi_changeIp(new_ip());
 }
 }
@@ -210,7 +210,7 @@ switch ($rand) {
        $msg = "Сейчас: {$temtime}";
     break;    
 }
-send_msg($user_id,$msg);  
+sendu_msg($user_id,$msg);  
 echo("Текстовая предложка: {$msg}. для {$user_id}\n");
 }//Текстовые предложки
 function admin_sugg($user_id){
@@ -318,7 +318,7 @@ echo("Смена для {$sign} текст:{$text}\n");
 return $sign;
 }//Заполенине базы гороскопов
 
-function send_msg($user_id,$text){
+function sendu_msg($user_id,$text){
 $keyboard = keybrd('',$user_id); //Клавиатура
 $username = usrname($user_id,'get',1);   //Имя поьзователя 
 $msg = "{$username}, {$text}";
@@ -346,7 +346,7 @@ if (mysqli_connect_errno()) {
                 if ($mysqli->query($sql) === TRUE) {
                 $msg = "В [{$row['time']}]: {$row['text']}";
                 $user_id = $row['user_id'];    
-                send_msg($user_id,$msg);
+                sendu_msg($user_id,$msg);
                 sleep(0.5);
                 musicon("/glados/morning");
                 write_scr($msg);
@@ -358,7 +358,7 @@ if (mysqli_connect_errno()) {
                 if ($mysqli->query($sql) === TRUE) {
                 $msg = "В [{$row['time']}]: {$row['text']}";
                 $user_id = $row['user_id'];    
-                send_msg($user_id,$msg);
+                sendu_msg($user_id,$msg);
                 sleep(0.5);
                 musicon($row['music']);
                 write_scr($msg);
@@ -372,7 +372,7 @@ if (mysqli_connect_errno()) {
                   $user_id = $row['user_id'];    
                   coffee(2);
                   sleep(0.5);
-                  send_msg($user_id,$msg);
+                  sendu_msg($user_id,$msg);
                   sleep(0.5);
                   write_scr($msg);
                   echo("Выполнил активное событие! Сообщение: {$msg}\n");
@@ -427,7 +427,7 @@ if ($stmt = $mysqli->prepare("SELECT user_id FROM dialog WHERE user_id LIKE '%' 
     while ($stmt->fetch()) { 
        $user_id = $col1;
        if ($user_id!==null){
-           send_msg($user_id,horoscop($user_id));
+           sendu_msg($user_id,horoscop($user_id));
            sleep(3);
         }
     } 
@@ -451,7 +451,7 @@ if ($stmt = $mysqli->prepare("SELECT user_id FROM dialog WHERE user_id LIKE '%' 
        $user_id = $col1;
        if ($user_id!==null){
            $temp = rand_adv();
-           send_msg($user_id,"Совет дня: {$temp}");
+           sendu_msg($user_id,"Совет дня: {$temp}");
            sleep(3);
         }
     } 
@@ -475,7 +475,7 @@ if ($stmt = $mysqli->prepare("SELECT user_id FROM dialog WHERE user_id LIKE '%' 
        $user_id = $col1;
        if ($user_id!==null){
            $temp = sayme();
-           send_msg($user_id,$temp);
+           sendu_msg($user_id,$temp);
            sleep(3);
         }
     } 
