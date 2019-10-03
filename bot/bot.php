@@ -325,7 +325,7 @@ function docmd($cmd,$user_id){
 
     case "drink":
                bot_sendSticker($user_id,"16"); 
-               send_mus('music_coffee.mp3');
+               send_mus('coffee');
                $text = "Напиток готов";    
                $time = normaltime("10");
                $music = "coffee";
