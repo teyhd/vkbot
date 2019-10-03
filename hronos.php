@@ -1,6 +1,8 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
 require('phpQuery/phpQuery/phpQuery.php');
+require_once 'index.php';
+require_once 'calend.php';
 require_once 'config.php';
 require_once 'global.php';
 require_once 'api/vk_api.php';
@@ -11,12 +13,12 @@ require_once 'bot/keyboard.php';
 require_once 'bot/mysql_func.php'; 
 require_once 'bot/non_msg.php'; 
 
-define("SUGG_INTERVAL",5);
+define("SUGG_INTERVAL",30);
 define("ADMIN_ID",120161867);
-
 echo("Запущен протокол hronos\n");
 musicon("/glados/wakeup01");
 send_msg(ADMIN_ID,"Сервер включен. Загрузка настроек...");
+check_ip();
 sleep(2);
 musicon("/glados/wakeup02");
 send_msg(ADMIN_ID,"Натсройки успешно загружены!");
@@ -34,12 +36,13 @@ send_msg(ADMIN_ID,"Протокол хронос успешно запущен!"
 musicon("/glados/bootupsequence1801");
 $temp_text = 'none';
 $sugg_time_count = 0;
+
 while(true){
 $hours=date("H");
 $min = date("i");
 $sec = date("s");
 
-if (($hours=="22")&&($min=="00")&&($sec=="00")) { //00:05:00 Обновление гороскопа
+if (($hours=="00")&&($min=="10")&&($sec=="00")) { //00:05:00 Обновление гороскопа
     s_horoscop();
     send_msg(ADMIN_ID,"Гороскопы успешно обновлены. Сейчас отправим ваш!");
     send_msg(ADMIN_ID,horoscop(ADMIN_ID));
@@ -95,6 +98,7 @@ if (($hours=="04")&&($min=="00")&&($sec=="00")) { //Выключение все�
 
 if ($sugg_time_count==SUGG_INTERVAL){ //Время предложек
     admin_list();
+    check_ip();
     $sugg_time_count=0;
 }
 
@@ -143,6 +147,14 @@ active($event);
 sleep(1);   
 }
 
+
+function check_ip(){
+    if (new_ip()<>bd_ip('get','1')){
+    bd_ip('set',new_ip());
+    send_msg(ADMIN_ID,bd_ip('get','1'));
+    vkApi_changeIp(new_ip());
+}
+}
 
 //Все предложки
 function drink_sugg($user_id){
@@ -234,20 +246,11 @@ function write_scr($text){
         for($i=0;$i<=$pic_count;$i++){
         $temp_str = "{$temp_str}_{$pieces[$i]}"; 
         }
-        $url = "http://192.168.0.103/msg.php?q=sentmsg?{$temp_str}";
-        $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL,$url);
-        curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-        curl_exec($ch);
-        curl_close($ch);
-      for($i=1;$i<=$pic_count;$i++){
-           $temp_str = "{$temp_str} {$pieces[$i]}"; 
-           }
-      $temp_str = trim($temp_str); 
+      send_msg($temp_str); 
       remember($user_id,"set",$temp_str);
       echo("Вывел на экран: {$text}\n");
 }//Написать на экран
+
 function s_horoscop(){
 $signs = array("capricorn", "aquarius", "pisces", "aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius");
 for($i=0;$i<=6;$i++){
@@ -314,6 +317,7 @@ $mysqli->close();
 echo("Смена для {$sign} текст:{$text}\n");
 return $sign;
 }//Заполенине базы гороскопов
+
 function send_msg($user_id,$text){
 $keyboard = keybrd('',$user_id); //Клавиатура
 $username = usrname($user_id,'get',1);   //Имя поьзователя 
@@ -322,21 +326,7 @@ vkApi_messagesSend($user_id, $msg,'',$keyboard);
 echo("Отправлено сообщение для {$user_id} с текстом: {$text}\n");
 }//Отправить сообщение
 function musicon($title){
-    $url = "http://192.168.0.103/msg.php?q=sentmsg?music_{$title}.mp3_2_3_4_5";
-    $ch = curl_init();
-    curl_setopt($ch,CURLOPT_URL,$url);
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-    curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-    curl_exec($ch);
-    curl_close($ch);
-    sleep(1);
-   $url = "http://192.168.0.103/msg.php?q=sentmsg?*_2_3_4_5";
-    $ch = curl_init();
-    curl_setopt($ch,CURLOPT_URL,$url);
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-    curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-    curl_exec($ch);
-    curl_close($ch);    
+    send_mus($title);
 }//Включить музыку
 
 function active($date){ 
@@ -494,6 +484,20 @@ if ($stmt = $mysqli->prepare("SELECT user_id FROM dialog WHERE user_id LIKE '%' 
 $mysqli->close(); 
 echo("Отправлена предложка вот этому перцу {$isadmin}\n");
 } //Расслка пословиц
+function new_ip(){
+     $url = "https://2ip.ru/";
+   $ch = curl_init();  
+    curl_setopt($ch, CURLOPT_URL, $url); 
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+    curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 10);
+    $file = curl_exec($ch); 
+    curl_close($ch);
 
+    $doc = phpQuery::newDocument($file);
+    $res = $doc->find('#d_clip_button')->text();
+    $res = explode(".", $res);
+    $tans = "{$res[0]}.{$res[1]}.{$res[2]}.{$res[3]}";
+    return $tans;
+}
 
 ?>
